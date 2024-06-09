@@ -1,0 +1,31 @@
+<div class="container-fluid page ">
+    <div class="row text-center">
+      <div class="col-sm-12 text-center titre">
+  <h4>Welcome </h4>
+  <p>You can Update access of agency account .</p>
+  </div>
+  </div>
+  
+  <div class="row bb">
+    <div class="col-sm-12 col-md-6 offset-md-3"> 
+        <form class="example-form" [formGroup]="myForm">
+            <mat-form-field appearance="fill" class="example-full-width inputt">
+
+              <mat-label>Access</mat-label>
+              <mat-select formControlName="access"
+              [(value)]="selectedValue"
+                [(ngModel)]="user.access">
+                <mat-option value="Refused" style="background-color: red;">Refused</mat-option>
+                <mat-option value="Accepted" style="background-color: green;">Accepted</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </form>
+          <div class="col-sm-12 col-md-6 BTNN ">
+            <button class="BTN" (click)="update(this._id)"> Update Access </button>
+    
+          </div>
+  
+        </div>
+     
+      </div>
+    </div>

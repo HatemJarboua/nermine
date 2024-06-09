@@ -1,0 +1,69 @@
+/* Container styling */
+#container {
+    padding: 20px;
+   
+    height: 100vh;
+    width: 100%;
+    background: url("../../assets/images/backgroundHome (2).svg")
+      no-repeat;
+      
+    background-size :cover;
+  }
+  
+ 
+  
+  /* Car List Table styling */
+  .carTable {
+    margin-top: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #7F7BC3;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .table-bordered {
+    border: 1px solid #ddd;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 4px 8px #7F7BC3;
+  }
+  
+  /* Link styling */
+  .lien-2 {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #7F7BC3;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .lien-2:hover {
+    background-color: #7F7BC3;
+  }
+  h1{
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #3a3a3d;
+    font-style: italic;
+  }

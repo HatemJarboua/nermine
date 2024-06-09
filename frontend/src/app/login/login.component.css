@@ -1,0 +1,60 @@
+
+#login{
+    height: 100vh;
+    width: 100%;
+    background: url("../../assets/images/registerBackground.svg") 
+      no-repeat;
+      overflow: hidden;
+    background-size :cover;
+
+
+}
+.img-login{
+    margin-top: 5%;
+    text-align:center;
+}
+.Input{
+border-color:#7F7BC3 ;
+ border-radius: 31px;
+    margin-top: 15px;
+    width: 100%;
+    background-color: transparent !important;
+}
+
+.login-box{
+    margin-top: 9%;
+    float: center;
+border-radius: 31px;
+background-color: #fff;
+}
+.label{
+    margin-top: 15px;
+        color: #7F7BC3;
+    font-family: Rubik;
+    font-weight: bold;
+
+}
+.lien-2{  color:#7F7BC3 ;
+    font-family: Rubik;
+    margin: 15px;
+    font-weight: bold;
+float: right;}
+.BTN{
+     margin: 15px;
+    background-color: #7F7BC3 !important;
+    border-radius: 31px;
+    float: center;
+    width:90%;
+    text-align: center;
+    border-color:#7F7BC3 ;
+    color: #fff;
+
+}
+.lien{
+   color:#7F7BC3 ;
+   font-family: Rubik;
+   margin: 15px;
+
+   font-weight: bold;
+
+}

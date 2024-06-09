@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <div class="row">
+    <h1>reserved your dream car from our car rental agencies </h1>
+    </div>
+    <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let car of (carList || []) | slice:0:(showAll ? (carList?.length || 0) : 3)">
+      <div class="card">
+        <img *ngIf="car.imageCar" [src]="imagesURL + car.imageCar" class="card-img-top" alt="Car Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ car.mark }} </h5>
+          <p class="card-text">{{ car.price }} dt </p>
+          <p class=""></p>
+          <a [routerLink]="['/reserve', car._id]" class="btn btn-primary">Réserver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="toggleShowAll()" class="btn btn-secondary mt-3">
+    {{ showAll ? 'Voir moins' : 'Voir plus' }}
+  </button>
+</div>

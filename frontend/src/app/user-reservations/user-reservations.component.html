@@ -1,0 +1,37 @@
+<div class="container-fluid" id="container">
+  <img src="../../assets/images/rent car.png" height="150px" width="150px" class="logo"> 
+  <h1> Our Reservations</h1>
+  <div class="carList">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-10 carTable">
+        <table class="table table-striped table-bordered" *ngIf="carList.length > 0 && reservation.length > 0">
+          <thead>
+            <tr class="shadow-lg">
+              <th>Mark</th>
+              <th>Nom</th>
+              <th>Adresse Email</th>
+              <th>Phone</th>
+              <th>Date Debut</th>
+              <th>Date Fin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let res of reservation">
+              <td *ngIf="isAdminOfReservation(res.useradmin)">{{ res.mark }}</td>
+              <td *ngIf="isAdminOfReservation(res.useradmin)">{{ res.firstName }}</td>
+              <td *ngIf="isAdminOfReservation(res.useradmin)">{{ res.adresse }}</td>
+              <td *ngIf="isAdminOfReservation(res.useradmin)">{{ res.tel }}</td>
+              <td *ngIf="isAdminOfReservation(res.useradmin)">{{ res.dateDebut }}</td>
+              <td *ngIf="isAdminOfReservation(res.useradmin)">{{ res.dateFin }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row mt-3">
+    <div class="col-sm-12 text-center">
+      <a [routerLink]="['/CarList']" class="btn btn-secondary lien-2">Back to Car List</a>
+    </div>
+  </div>
+</div>

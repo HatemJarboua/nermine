@@ -1,0 +1,21 @@
+# Utiliser une image node alpine légère
+FROM node:alpine
+
+# Exposer le port sur lequel l'application Angular s'exécute par défaut
+EXPOSE 4200
+
+# Définir le répertoire de travail à l'intérieur du conteneur
+WORKDIR /app
+
+# Copier les fichiers de l'application Angular dans le conteneur
+COPY . .
+
+# Installer Angular CLI globalement
+RUN npm install -g @angular/cli
+
+# Installer les dépendances
+RUN npm install
+
+# Démarrer le serveur de développement Angular
+CMD ["ng", "serve", "--host", "0.0.0.0"]
+

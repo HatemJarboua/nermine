@@ -1,0 +1,43 @@
+.navbar-nav .nav-item .nav-link {
+    font-family: inherit;
+
+    font-size: 20px;
+    line-height: 52px;
+    letter-spacing: .1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}
+.navbar-nav .nav-item .nav-link1 {
+    font-family: inherit;
+
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: .1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3c2b2b;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    --webkit-transition: all 0.5s ease;
+}
+
+.navbar-toggler {
+    background-color: #1FBBA6;
+}
+
+.bg-dark {
+    background-color:transparent !important;
+}
+.ml-md-auto, .mx-md-auto {
+    margin-left: auto!important;
+
+}
+.fixed-top .navbar-dark .bg-dark {
+    background-color: #27198c!important;
+}
+.imgnav{
+    margin-top: 10%;
+}

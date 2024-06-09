@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+#toast-container > .toast-success  {
+    background-image: none;
+    background-color: #e9e9e9;
+    color: #99c37b;
+    font-weight: bold ;
+
+    
+}
+#toast-container > .toast-error {
+    background-image: none;
+    background-color: #e9e9e9;
+    color: #c37b7b;
+    font-weight: bold ;
+
+    
+}
+#toast-container > .toast-success:before {
+  /* content: url(assets/images/succees.svg)!important;
+   
+   */
+
+
+
+ 
+}
+#toast-container > .toast-error:before {
+ /*   content: url(assets/images/error.svg)!important;
+   */
+    
+}

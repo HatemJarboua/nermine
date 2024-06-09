@@ -1,0 +1,43 @@
+<div class="body">
+<div class="reservation-form-container">
+  <h1>Réserver une voiture</h1>
+  <form [formGroup]="myForm">
+
+    <div class="form-group1">
+      <label for="useradmin" class="form-group1">Nom de l'administrateur :</label>
+      <input  type="text" id="useradmin" name="user" formControlName="useradmin" class="form-control" [(ngModel)]="car.user" required >
+    </div>
+
+    <div class="form-group">
+      <label for="mark">Marque de la voiture :</label>
+      <input type="text" id="mark" name="mark" formControlName="mark" class="form-control" [(ngModel)]="car.mark" required>
+    </div>
+ 
+    <div class="form-group">
+      <label for="firstName">Prénom :</label>
+      <input type="text" id="firstName" name="firstName" formControlName="firstName" class="form-control" [(ngModel)]="reservation.firstName" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Nom :</label>
+      <input type="text" id="lastName" name="lastName" formControlName="lastName" class="form-control" [(ngModel)]="reservation.lastName" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">adresse e-mail :</label>
+      <input type="text" id="adresse" name="adresse" formControlName="adresse" class="form-control"[(ngModel)]="reservation.adresse" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">télephone:</label>
+      <input type="text" id="tel" name="tel" formControlName="tel" class="form-control" [(ngModel)]="reservation.tel"required>
+    </div>
+    <div class="form-group">
+      <label for="dateDebut">Date de début :</label>
+      <input type="date" id="dateDebut" name="dateDebut" formControlName="dateDebut" class="form-control" [(ngModel)]="reservation.dateDebut" required>
+    </div>
+    <div class="form-group">
+      <label for="dateFin">Date de fin :</label>
+      <input type="date" id="dateFin" name="dateFin" formControlName="dateFin" class="form-control" [(ngModel)]="reservation.dateFin" required>
+    </div>
+    <button type="submit" (click)="save()" class="btn btn-primary">Réserver</button>
+  </form>
+</div>
+</div>

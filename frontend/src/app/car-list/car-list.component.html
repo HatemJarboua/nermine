@@ -1,0 +1,63 @@
+<div class="container-fluid " id="container">
+    <img src="../../assets/images/rent car.png" height="150px" width="150px"> 
+    <button class="BTNprofil" (click)="logout()"><img src="../../assets/images/deco.png" (click)="logout()" width="70px" height="70px"></button>
+   <h1>List Of Cars </h1>
+    <div class="carList">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-2 profil">
+
+                <img src="../../assets/images/user.svg" width="80px" height="80px">
+                 <h4 >{{user.firstName}}</h4>
+                 <p>{{user.email}}</p>
+                 <a class="lien" [routerLink]="['/user-reservations']">Our Reservations </a>
+                 <br/>
+            </div>
+            <div class="col-sm-12 col-md-10 carTable ">
+
+           <p>Welcome ! <strong>{{user.firstName}}</strong> <br>    
+            
+             <button class="BTNCartable" [routerLink]="['/Addcar']">add car </button> 
+             <table class="table" *ngIf="carList">
+                 <tr class="shadow-lg">
+                    <th >Registration</th>
+                    <th >Mark</th>
+                    <th >Price/jour</th>
+                    <th >Picture</th>
+                    <th ></th>
+                    <th ></th>
+                    <th ></th>
+                  </tr>
+                
+                  <tr *ngFor="let car of carList ">
+                    <td >{{car.imm}}</td>
+                    <td>{{car.mark}}</td>
+                    <td>{{car.price}}dt </td>
+                    <td><img width="80px" height="80px" *ngIf="car.imageCar" [src]="imagesURL + car.imageCar"></td>
+                    <td></td>
+                    <td><button class="BTN" [routerLink]="['/details',car._id]"> <img src="../../assets/images/info.png"
+                      width="30px" height="30px"></button></td>
+
+                     <td><button (click)="delete(car._id)"class="BTN">  <img src="../../assets/images/effacer.png"
+                      width="30px" height="30px"></button></td>
+                    <td><button class="BTN" [routerLink]="['/update',car._id]">   <img src="../../assets/images/iconnn.svg"
+                      width="30px" height="30px"></button></td>
+            
+                  </tr>
+                
+                 
+              </table>
+    
+    
+      </div>
+            </div>
+        
+        </div>
+      
+    </div>
+         
+  
+    
+
+  

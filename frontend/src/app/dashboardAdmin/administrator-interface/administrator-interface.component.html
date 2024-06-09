@@ -1,0 +1,68 @@
+<div class="container-fluid " id="container">
+    <img src="../../assets/images/rent car.png" height="150px" width="150px">
+    <button class="BTNprofil" ><img src="../../assets/images/exit.png" (click)="logout()" width="70px" height="70px">
+    </button>
+    <h2>liste of car rental agencies
+    </h2>
+    <div class="carList">
+        <div class="row">
+            <div class="col-sm-10 offset-md-1 shadow-lg profil">
+                <div class="row">
+                    <div class="col-sm-12 col-md-2">
+                  <img src="../../assets/images/user.svg" width="80px" height="80px">
+                  <h4 >{{user.firstName}}</h4>
+                 <p>{{user.email}}</p>
+    
+    
+                 
+                             
+                     </div>
+                       
+                  
+                        <div class="col-sm-12 col-md-10 carTable ">
+                            <p>Welcome ! Admin  </p>   
+                                
+                              <table class="table"  >
+                                  <tr class="shadow-lg"  >
+                                     <th >firstName</th>
+                                     <th >lastName</th>
+                                     <th >email</th>
+                                     <th>access</th>
+                                     <th >Status</th>
+                                     <th ></th>
+            
+                                   </tr>
+                                   <tr *ngFor="let user of userList">
+                                    <td *ngIf="user.admin !== true"> {{ user.firstName }} </td>
+                                    <td *ngIf="user.admin !== true"> {{ user.lastName }} </td>
+                                    <td *ngIf="user.admin !== true"> {{ user.email }} </td>
+                                    <td *ngIf="user.admin !== true" [ngStyle]="{'color': user.access === 'Refused' ? 'red' : 'green'}"> {{ user.access }} </td>
+                                    
+                                    <td *ngIf="user.admin !== true">
+                                        <button class="BTN" [routerLink]="['/updateAccess', user._id]">
+                                            <img src="../../assets/images/iconnn.svg"
+                                            width="50px" height="50px"></button>
+                                    </td>
+                                    <td *ngIf="user.admin !== true">
+                                        <button (click)="delete(user._id)" class="BTN">
+                                             <img src="../../assets/images/effacer.png"
+                                            width="50px" height="50px"> </button>
+                                    </td>
+                                </tr>
+                                  
+                               </table>
+                     
+                     
+                       </div>
+                             </div>
+                         
+                         </div>
+                       
+                     </div>
+                     
+                        
+            
+            
+                    </div>
+                </div>
+        
